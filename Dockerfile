@@ -5,6 +5,5 @@ ENV WORKON_HOME ~/.virtualenvs
 ENV VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3 
 RUN echo "export PATH=$PATH:/home/eli/.local/bin/" >> /home/eli/.zshrc
 RUN echo "source /home/eli/.local/bin/virtualenvwrapper.sh" >> /home/eli/.zshrc
-RUN source /home/eli/.zshrc 
-RUN mkvirtualenv mlops
+RUN omz reload && mkvirtualenv mlops
 RUN echo "workon mlops" >> /home/eli/.zshrc
